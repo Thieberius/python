@@ -1,0 +1,15 @@
+import urllib
+from urllib import request
+auslese = request.urlopen('http://www.example.com/')
+print(auslese.code)
+print("Dateigröße in Bytes:", auslese.length)
+print()
+print("Anfang des Inhalts:", auslese.peek())
+print()
+inhalt = auslese.read()
+print(type(inhalt))
+inhalt_text = inhalt.decode("UTF-8")
+print(type(inhalt_text))
+inhalt = auslese.read()
+inhalt_text = inhalt.decode("UTF-8")
+print(inhalt_text)
